@@ -1,16 +1,32 @@
 {
-  "name": "vote-api",
-  "version": "1.0.0",
-  "description": "Back-end APIs for a voting app.",
-  "main": "server.js",
-  "devDependencies": {
-    "jest": "^25.1.0"
-  },
-  "scripts": {
-    "test": "jest",
-    "start": "node server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+     "name": "vote-api",
+     "version": "1.0.0",
+     "description": "Back-end APIs for a voting app.",
+     "main": "server.js",
+     "devDependencies": {
+          "jest": "^25.5.4"
+     },
+     "scripts": {
+          "test": "jest",
+          "start": "node server.js",
+          "migrate": "sqlite3 db/election.db < db/schema.sql",
+          "seed": "sqlite3 db/election.db < db/seeds.sql",
+          "db": "sqlite3 db/election.db"
+          
+     },
+     "keywords": [],
+     "author": "",
+     "license": "ISC",
+     "dependencies": {
+          "express": "^4.17.1",
+          "sqlite3": "^5.0.2"
+     },
+     "repository": {
+          "type": "git",
+          "url": "git+https://github.com/nvduran/u-develop-it.git"
+     },
+     "bugs": {
+          "url": "https://github.com/nvduran/u-develop-it/issues"
+     },
+     "homepage": "https://github.com/nvduran/u-develop-it#readme"
 }
